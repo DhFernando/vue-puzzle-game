@@ -1,6 +1,7 @@
 <template  >
   <div id="app"  >
       <puzzle />
+      
   </div>
 </template>
 

@@ -49,7 +49,7 @@
               </div>
               <div class="row mt-3">
                   <!-- <button class="btn btn-success mr-3">Start</button> -->
-                  <button class="btn btn-warning">Reset</button>
+                  <button class="btn btn-warning" @click="reset()">Reset</button>
                   <strong class="mt-1 ml-5"> movement : {{count}}</strong>
               </div>
             </div>
@@ -61,8 +61,9 @@
 </template>
 
 <script>
+
 export default {
-  name: 'puzzle',
+    name: 'puzzle',
   
   data(){
       return{
@@ -83,6 +84,7 @@ export default {
       movementCount(){
         this.count ++
         this.winCheck();
+      
       },
       winCheck(){
         if(
@@ -97,6 +99,9 @@ export default {
           )
           {    alert("you win the game")     }
       },
+        reset(){
+            location.reload();
+        },
 
       clicked(cood){
        if(cood == 'one'){
