@@ -97,7 +97,10 @@ export default {
           this.coods.seven == 7
         
           )
-          {    alert("you win the game")     }
+          {    
+            alert("you win the game with" + this.count + " movements")
+            this.reset()
+          }
       },
         reset(){
             location.reload();
