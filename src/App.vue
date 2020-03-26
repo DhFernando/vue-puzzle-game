@@ -1,16 +1,16 @@
 <template  >
   <div id="app"  >
-      <ticTacToe />
+      <puzzle />
   </div>
 </template>
 
 <script>
-import ticTacToe from './components/puzzle'
+import puzzle from './components/puzzle'
 
 export default {
   name: 'app',
   components: {
-    ticTacToe
+    puzzle
   },
   data(){
     return{
