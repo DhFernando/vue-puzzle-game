@@ -1,20 +1,45 @@
 <template>
   <div>
     <div class="container">
-      <div class="row">
-        <button @click="clicked('one')">{{ coods.one }}</button>
-        <button @click="clicked('two')">{{ coods.two }}</button>
-        <button @click="clicked('three')" >{{ coods.three }}</button>
-      </div>
-      <div class="row">
-        <button @click="clicked('four')">{{ coods.four }}</button>
-        <button @click="clicked('five')">{{ coods.five }}</button>
-        <button @click="clicked('six')" >{{ coods.six }}</button>
-      </div>
-      <div class="row">
-        <button @click="clicked('seven')">{{ coods.seven }}</button>
-        <button @click="clicked('eight')">{{ coods.eight }}</button>
-        <button @click="clicked('nine')" >{{ coods.nine }}</button>
+      <div class="row ">
+        <div class="col-12">
+          <div class="row mt-1 mb-1">
+            <h3><strong><b>DH <span class="text-primary">puzzle</span></b></strong> -  Vue</h3>
+          </div>
+            <div class="row">
+                <div class="border p-0" @click="clicked('one')">
+                  <img :src="require('@/assets/'+ coods.one.toString() +'.jpg')" />  
+                </div>
+                <div class="border p-0" @click="clicked('two')">
+                  <img :src="require('@/assets/'+ coods.two.toString() +'.jpg')" />  
+                </div>
+                <div class="border p-0" @click="clicked('three')" >
+                  <img :src="require('@/assets/'+ coods.three.toString() +'.jpg')" />
+                </div>
+              </div>
+              <div class="row">
+                <div class="border p-0" @click="clicked('four')">
+                  <img :src="require('@/assets/'+ coods.four.toString() +'.jpg')" /> 
+                </div>
+                <div class="border p-0" @click="clicked('five')">
+                  <img :src="require('@/assets/'+ coods.five.toString() +'.jpg')" /> 
+                </div>
+                <div class="border p-0" @click="clicked('six')" >
+                  <img :src="require('@/assets/'+ coods.six.toString() +'.jpg')" /> 
+                </div>
+              </div>
+              <div class="row">
+                <div class="border p-0" @click="clicked('seven')">
+                  <img :src="require('@/assets/'+ coods.seven.toString() +'.jpg')" /> 
+                  </div>
+                <div class="border p-0" @click="clicked('eight')">
+                  <img :src="require('@/assets/'+ coods.eight.toString() +'.jpg')" />
+                  </div>
+                <div class="border p-0" @click="clicked('nine')" >
+                  <img :src="require('@/assets/'+ coods.nine.toString() +'.jpg')" /> 
+                  </div>
+              </div>
+        </div>
       </div>
     </div>
   </div>
@@ -31,7 +56,8 @@ export default {
           'one':1,  'two':2,  'three':3,
           'four':4,  'five':5,  'six':6,
           'seven':7,  'eight':8, 'nine':'X'
-        }
+        },
+        imge:'../assets/1.jpg'
       }
     },
     computed: {
